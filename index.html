@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="THRIFTY — The new standard of everyday wear. Premium clothing designed with intention.">
+
+  <meta name="theme-color" content="#080808">
+
+  <title>THRIFTY — The New Standard of Everyday Wear</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div>THRIFTY</div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+
+    <a href="#home" class="logo">
+      THRIFTY
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#new">NEW</a>
+      <a href="#shop">SHOP</a>
+      <a href="#collections">COLLECTIONS</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <button onclick="openDrawer('searchDrawer')">
+        SEARCH
+      </button>
+
+      <button onclick="openDrawer('accountDrawer')">
+        ACCOUNT
+      </button>
+
+      <button onclick="openDrawer('wishlistDrawer')">
+        ♡ <span id="wishlistCount">0</span>
+      </button>
+
+      <button onclick="openDrawer('cartDrawer')">
+        CART <span id="cartCount">0</span>
+      </button>
+
+      <button class="menu-button" onclick="openMobileMenu()">
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- MOBILE MENU -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <button class="close-mobile" onclick="closeMobileMenu()">×</button>
+
+    <a href="#new" onclick="closeMobileMenu()">NEW</a>
+    <a href="#shop" onclick="closeMobileMenu()">SHOP</a>
+    <a href="#collections" onclick="closeMobileMenu()">COLLECTIONS</a>
+    <a href="#about" onclick="closeMobileMenu()">ABOUT</a>
+
+  </div>
+
+
+  <!-- HERO -->
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2200&q=90"
+          alt="THRIFTY fashion campaign">
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content reveal">
+
+        <p class="eyebrow">
+          THRIFTY / AUTUMN 2026
+        </p>
+
+        <h1>
+          The new standard
+          <br>
+          <em>of everyday wear.</em>
+        </h1>
+
+        <a href="#new" class="primary-button">
+          SHOP COLLECTION
+          <span>↗</span>
+        </a>
+
+      </div>
+
+      <div class="scroll-indicator">
+        SCROLL
+        <span></span>
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED -->
+
+    <section class="section" id="new">
+
+      <div class="section-heading reveal">
+
+        <div>
+          <p class="eyebrow">
+            01 / FEATURED
+          </p>
+        </div>
+
+        <h2>
+          Selected pieces.
+        </h2>
+
+        <a href="#shop">
+          VIEW ALL ↗
+        </a>
+
+      </div>
+
+      <div class="product-grid" id="featuredProducts"></div>
+
+    </section>
+
+
+    <!-- EDITORIAL -->
+
+    <section class="editorial section" id="collections">
+
+      <div class="editorial-image reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=90"
+          alt="THRIFTY editorial">
+
+      </div>
+
+      <div class="editorial-content reveal">
+
+        <p class="eyebrow">
+          THE THRIFTY EDIT
+        </p>
+
+        <h2>
+          Designed for
+          <br>
+          <em>everyday icons.</em>
+        </h2>
+
+        <p>
+          Quiet silhouettes. Considered materials.
+          Pieces made to move through your day without
+          asking for attention.
+        </p>
+
+        <a href="#shop" class="text-link">
+          EXPLORE THE COLLECTION →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- BRAND STORY -->
+
+    <section class="brand-story" id="about">
+
+      <div class="story-title reveal">
+
+        <p class="eyebrow">
+          02 / THE BRAND
+        </p>
+
+        <h2>
+          WEAR
+          <br>
+          YOUR
+          <br>
+          <em>IDENTITY.</em>
+        </h2>
+
+      </div>
+
+      <div class="story-text reveal">
+
+        <p>
+          THRIFTY is built around the idea that personal
+          style should feel effortless.
+
+          We strip away the noise and focus on fit,
+          texture, proportion and pieces you actually
+          want to wear.
+        </p>
+
+        <a href="#shop" class="light-link">
+          OUR APPROACH →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEW ARRIVALS -->
+
+    <section class="section" id="shop">
+
+      <div class="section-heading reveal">
+
+        <div>
+          <p class="eyebrow">
+            03 / NEW ARRIVALS
+          </p>
+        </div>
+
+        <h2>
+          Fresh perspective.
+        </h2>
+
+      </div>
+
+      <div class="horizontal-products" id="newProducts"></div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="section">
+
+      <div class="section-heading reveal">
+
+        <div>
+          <p class="eyebrow">
+            04 / CATEGORIES
+          </p>
+        </div>
+
+        <h2>
+          Find your uniform.
+        </h2>
+
+      </div>
+
+      <div class="category-grid">
+
+        <a href="#shop"
+           class="category-card reveal"
+           onclick="filterProducts('Men')">
+
+          <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1400&q=90"
+            alt="Men">
+
+          <span>
+            MEN
+            <i>↗</i>
+          </span>
+
+        </a>
+
+
+        <a href="#shop"
+           class="category-card reveal"
+           onclick="filterProducts('Women')">
+
+          <img
+            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=90"
+            alt="Women">
+
+          <span>
+            WOMEN
+            <i>↗</i>
+          </span>
+
+        </a>
+
+
+        <a href="#shop"
+           class="category-card reveal"
+           onclick="filterProducts('Unisex')">
+
+          <img
+            src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1400&q=90"
+            alt="Unisex">
+
+          <span>
+            UNISEX
+            <i>↗</i>
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- BEST SELLERS -->
+
+    <section class="section">
+
+      <div class="section-heading reveal">
+
+        <div>
+          <p class="eyebrow">
+            05 / BEST SELLERS
+          </p>
+        </div>
+
+        <h2>
+          The ones you keep.
+        </h2>
+
+      </div>
+
+      <div class="product-grid" id="bestProducts"></div>
+
+    </section>
+
+
+    <!-- SOCIAL -->
+
+    <section class="section social">
+
+      <div class="section-heading reveal">
+
+        <div>
+          <p class="eyebrow">
+            06 / SOCIAL
+          </p>
+        </div>
+
+        <h2>
+          @thrifty.world
+        </h2>
+
+        <a href="#">
+          FOLLOW ON INSTAGRAM ↗
+        </a>
+
+      </div>
+
+      <div class="social-grid">
+
+        <img class="reveal"
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+          alt="Fashion">
+
+        <img class="reveal"
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+          alt="Fashion">
+
+        <img class="reveal"
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=85"
+          alt="Fashion">
+
+        <img class="reveal"
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+          alt="Fashion">
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+      <div class="newsletter-content reveal">
+
+        <p class="eyebrow">
+          07 / STAY CONNECTED
+        </p>
+
+        <h2>
+          Stay in the
+          <em>loop.</em>
+        </h2>
+
+        <p>
+          First access to new drops,
+          collections and exclusive releases.
+        </p>
+
+        <form id="newsletterForm">
+
+          <input
+            type="email"
+            placeholder="YOUR EMAIL"
+            required>
+
+          <button>
+            SUBSCRIBE ↗
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-main">
+
+      <div>
+
+        <div class="logo">
+          THRIFTY
+        </div>
+
+        <p>
+          The new standard of everyday wear.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+
+          <b>SHOP</b>
+
+          <a href="#new">New Arrivals</a>
+          <a href="#shop">Best Sellers</a>
+          <a href="#collections">Collections</a>
+          <a href="#shop">Sale</a>
+
+        </div>
+
+
+        <div>
+
+          <b>HELP</b>
+
+          <a href="#">Contact</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Size Guide</a>
+
+        </div>
+
+
+        <div>
+
+          <b>COMPANY</b>
+
+          <a href="#about">About</a>
+          <a href="#">Journal</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+
+        </div>
+
+
+        <div>
+
+          <b>SOCIAL</b>
+
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">TikTok</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 THRIFTY
+      </span>
+
+      <span>
+        DELHI / INDIA
+      </span>
+
+      <span>
+        BUILT WITH INTENTION.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- BACKDROP -->
+
+  <div class="backdrop" id="backdrop" onclick="closeAllDrawers()"></div>
+
+
+  <!-- CART DRAWER -->
+
+  <aside class="drawer" id="cartDrawer">
+
+    <div class="drawer-header">
+
+      <h3>
+        Your bag
+        <span id="drawerCartCount">0</span>
+      </h3>
+
+      <button onclick="closeAllDrawers()">×</button>
+
+    </div>
+
+
+    <div class="shipping-progress">
+
+      <div id="shippingProgress"></div>
+
+    </div>
+
+    <p class="shipping-text" id="shippingText">
+      Add ₹5,000 for complimentary shipping.
+    </p>
+
+
+    <div class="cart-items" id="cartItems"></div>
+
+
+    <div class="cart-footer">
+
+      <div class="subtotal">
+
+        <span>SUBTOTAL</span>
+
+        <strong id="subtotal">
+          ₹0
+        </strong>
+
+      </div>
+
+      <button
+        class="checkout-button"
+        onclick="checkout()">
+
+        CHECKOUT ↗
+
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- SEARCH -->
+
+  <aside class="drawer small-drawer" id="searchDrawer">
+
+    <div class="drawer-header">
+
+      <h3>
+        Search
+      </h3>
+
+      <button onclick="closeAllDrawers()">×</button>
+
+    </div>
+
+    <input
+      class="search-input"
+      id="searchInput"
+      placeholder="SEARCH PRODUCTS">
+
+    <div id="searchResults"></div>
+
+  </aside>
+
+
+  <!-- ACCOUNT -->
+
+  <aside class="drawer small-drawer" id="accountDrawer">
+
+    <div class="drawer-header">
+
+      <h3>
+        Account
+      </h3>
+
+      <button onclick="closeAllDrawers()">×</button>
+
+    </div>
+
+    <div class="account-content">
+
+      <p class="eyebrow">
+        THRIFTY ACCOUNT
+      </p>
+
+      <h2>
+        Welcome back.
+      </h2>
+
+      <input placeholder="EMAIL">
+
+      <input
+        placeholder="PASSWORD"
+        type="password">
+
+      <button class="checkout-button">
+        SIGN IN ↗
+      </button>
+
+      <a href="#">
+        CREATE ACCOUNT
+      </a>
+
+    </div>
+
+  </aside>
+
+
+  <!-- WISHLIST -->
+
+  <aside class="drawer small-drawer" id="wishlistDrawer">
+
+    <div class="drawer-header">
+
+      <h3>
+        Wishlist
+        <span id="drawerWishlistCount">0</span>
+      </h3>
+
+      <button onclick="closeAllDrawers()">×</button>
+
+    </div>
+
+    <div id="wishlistItems"></div>
+
+  </aside>
+
+
+  <!-- PRODUCT MODAL -->
+
+  <div class="product-modal" id="productModal">
+
+    <div class="modal-box">
+
+      <button
+        class="modal-close"
+        onclick="closeProduct()">
+        ×
+      </button>
+
+      <div id="modalContent"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+
+  <div class="toast" id="toast"></div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
